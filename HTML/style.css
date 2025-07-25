@@ -63,7 +63,11 @@ h1 {
   color: #2344;
   color: rgba(23, 45, 23, 0.5);
 } */
-
+/* @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap'); */
+@font-face {
+  font-family: "Lavishly Yours";
+  src: url(LavishlyYours-Regular.ttf);
+}
 body {
   margin: 0;
   background-color: rgb(254, 247, 247);
@@ -78,11 +82,28 @@ h1 {
   margin: 5px;
   margin-bottom: 100px;
   border-bottom: 2px solid #234523;
-
+  /* text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: black;
+  text-decoration-thickness: 2px; */
+  text-decoration: underline wavy black 2px;
+  text-shadow: 10px 15px 10px black;
+  /* text-emphasis-style: '²';
+  text-emphasis-color: black;
+  text-emphasis-position: under; */
+  text-emphasis: "²" black;
+  text-emphasis-position: under;
+  text-transform: lowercase;
+  word-spacing: 1px;
+  letter-spacing: 3px;
+  font-family: "Lavishly Yours", Alkatra, Georgia;
+  line-height: 5;
 }
 header > p {
   font-weight: bold;
   font-size: 20px;
+  border: 2px solid #234523;
+  line-height: 50px;
 }
 .article_section {
   margin-top: 50px;
@@ -105,7 +126,17 @@ header > p {
 .article_section article p {
   font-size: 20px;
   font-style: italic;
-  text-align: center;
+  text-align: justify;
+  text-align-last: justify;
+}
+.article_section article:first-of-type p {
+  white-space: pre-line;
+  word-break: break-all;
+  line-break: strict;
+  hyphens: auto;
+}
+.article_section article:first-of-type p {
+  text-indent: 100px;
 }
 footer {
   margin: 0;
