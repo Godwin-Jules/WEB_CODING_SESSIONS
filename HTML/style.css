@@ -121,7 +121,7 @@ header > p {
   height: auto;
   border-radius: 10px;
   justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px var(--main-color);
 }
 .article_section article p {
   font-size: 20px;
@@ -149,4 +149,44 @@ footer p {
   color: #333;
   font-size: 20px;
   font-weight: bold;
+}
+h3[class]{
+  color:white;
+  background-color: green;
+}
+img[alt="Found"] {
+  border: solid 5px black;
+  border-radius: 50%;
+}
+img[src][alt]{
+  border-width: 15px;
+}
+nav ul li a:hover   {
+  font-weight: bold;
+  color:black;
+  font-size: 20px;
+}
+nav ul li a:active {
+  font-size: 25px;
+}
+nav ul li a:focus {
+  border: solid 5px black;
+  padding: 5px;
+  margin: 10px;
+}
+.article_section article:nth-child(1){
+  background-color: gray;
+}
+:focus {
+  font-size: 40px;
+}
+:root{
+  --main-color: #234523;
+  --secondary-color: #f0f0f0;
+  --text-color: #333;
+  --font-family: 'Courier New', Courier, monospace;
+}
+:empty{
+  border: solid 5px red;
+  border-radius: 5px;
 }
