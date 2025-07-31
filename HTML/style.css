@@ -53,7 +53,6 @@ h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 } */
 
-
 /* h1 {
   color: #234523;
   color: #234;
@@ -96,12 +95,13 @@ h1 {
   text-transform: lowercase;
   word-spacing: 1px;
   letter-spacing: 3px;
-  font-family: "Lavishly Yours", Alkatra, Georgia;
+  font-family: "Lavishly Yours", Alkatra, Georgia !important;
   line-height: 5;
 }
 header > p {
   font-weight: bold;
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: 1em;
   border: 2px solid #234523;
   line-height: 50px;
 }
@@ -150,20 +150,20 @@ footer p {
   font-size: 20px;
   font-weight: bold;
 }
-h3[class]{
-  color:white;
+h3[class] {
+  color: white;
   background-color: green;
 }
 img[alt="Found"] {
   border: solid 5px black;
   border-radius: 50%;
 }
-img[src][alt]{
+img[src][alt] {
   border-width: 15px;
 }
-nav ul li a:hover   {
+nav ul li a:hover {
   font-weight: bold;
-  color:black;
+  color: black;
   font-size: 20px;
 }
 nav ul li a:active {
@@ -174,19 +174,56 @@ nav ul li a:focus {
   padding: 5px;
   margin: 10px;
 }
-.article_section article:nth-child(1){
+nav li {
+  /* list-style-type: upper-roman;
+  list-style-position: inside;
+  list-style-image: url("https://avatars.githubusercontent.com/u/122643"); */
+  list-style: url("https://avatars.githubusercontent.com/u/122643") inside
+}
+.article_section article:nth-child(1) {
   background-color: gray;
 }
 :focus {
   font-size: 40px;
 }
-:root{
+:root {
   --main-color: #234523;
   --secondary-color: #f0f0f0;
   --text-color: #333;
-  --font-family: 'Courier New', Courier, monospace;
+  --font-family: "Courier New", Courier, monospace;
 }
-:empty{
+:empty {
   border: solid 5px red;
   border-radius: 5px;
+}
+footer p::before {
+  content: "© ";
+  color: red;
+  font-weight: bold;
+  font-size: 30px;
+  position: relative;
+  top: 5px;
+}
+footer p::after {
+  content: " - All rights reserved.";
+  color: blue;
+  font-weight: bold;
+  font-size: 30px;
+  position: relative;
+  top: 5px;
+}
+footer::before {
+  /* content: url("https://avatars.githubusercontent.com/u/122643"); */
+  content: "\20B9";
+  width: 50px;
+  border-radius: 50%;
+}
+.rectangle {
+  width: calc(60px + 50vw);
+  height: 15vmax;
+  background-color: red;
+  border: 5px solid black;
+  border-radius: 0;
+  transition: gray 3s ease-in;
+  transform: translate(100px, 100px);
 }
