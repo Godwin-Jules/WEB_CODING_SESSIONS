@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page de contact</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact.css" />
   </head>
   <body>
     <nav>
@@ -17,5 +17,27 @@
       </ul>
     </nav>
     <h1>NOUS CONTACTER</h1>
+    <form method="POST" action="">
+      <div class="input_control">
+        <label for="lastname">Nom :</label>
+        <input type="text" id="lastname" required>
+      </div>
+
+      <div class="input_control">
+        <label for="firstname">Prénom(s) :</label>
+        <input type="text" id="firstname" >
+      </div>
+
+      <div class="input_control">
+        <label for="object">Objet :</label>
+        <input type="text" id="object" >
+      </div>
+
+      <div class="input_control" id="message_div">
+        <label for="message">Message :</label>
+        <textarea id="message" cols="80" rows="10" required></textarea>
+      </div>
+      <button class="btn_submit">Soumettre</button>
+    </form>
   </body>
 </html>
